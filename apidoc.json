@@ -1,0 +1,5 @@
+{
+  "name": "node-api-async-await-express-mongodb-docker",
+  "version": "1.0.0",
+  "title": "Node API application with express, mongodb, async/await"
+}

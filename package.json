@@ -1,0 +1,34 @@
+{
+  "name": "node-api-async-await-express-mongodb-docker",
+  "description": "Node API application with express, mongodb, async/await",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "doc": "node_modules/.bin/apidoc -o doc -e node_modules",
+    "eslint": "node_modules/.bin/eslint . --ext .js",
+    "dev": "node_modules/.bin/nodemon --exec npm start"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "async": "^2.5.0",
+    "bluebird": "^3.5.0",
+    "body-parser": "~1.17.1",
+    "cors": "^2.8.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "helmet": "^3.6.1",
+    "mongoose": "^4.11.1",
+    "morgan": "~1.8.1",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.6",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "nodemon": "^1.11.0"
+  }
+}

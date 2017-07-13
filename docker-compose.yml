@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  api:
+    container_name: node
+    depends_on:
+      - mongo
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: yarn dev
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+      LOGGER: dev
+      MONGO_URL: mongodb://mongo:27017/node-api-async-await-express-mongodb-docker
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/app/node-api-async-await-express-mongodb-docker
+
+  mongo:
+    container_name: mongodb
+    image: mongo:3.4
+    command: mongod
